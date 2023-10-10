@@ -1,0 +1,29 @@
+{
+  "Unbreakable": 1,
+  "HideFlags": 254,
+  "display": {
+    "Lore": [
+      "\u00a77Sea Creature Chance: \u00a7c+1.5%",
+      "\u00a77Health: \u00a7a+60",
+      "\u00a77Defense: \u00a7a+25",
+      "",
+      "\u00a76Ability: Water Burst  \u00a7e\u00a7lSNEAK",
+      "\u00a77When wearing the full set,",
+      "\u00a77grants the wearer with the",
+      "\u00a77ability to \u00a7aburst forward\u00a77",
+      "\u00a77when sneaking in water.",
+      "\u00a78Mana Cost: \u00a7320",
+      "",
+      "\u00a77\u00a78This item can be reforged!",
+      "\u00a79\u00a7lRARE BOOTS"
+    ],
+    "Name": "\u00a79Salmon Boots"
+  },
+  "ExtraAttributes": {
+    "color": "160:101:64",
+    "originTag": "QUICK_CRAFTING_SHIFT",
+    "id": "SALMON_BOOTS_NEW",
+    "uuid": "2cb04046-3a05-40d6-867b-ab2b0ac5b80c",
+    "timestamp": "1/19/22 9:39 AM"
+  }
+}

@@ -1,0 +1,180 @@
+{
+  "fairy": [
+    "330066",
+    "4C0099",
+    "660033",
+    "660066",
+    "6600CC",
+    "7F00FF",
+    "99004C",
+    "990099",
+    "9933FF",
+    "B266FF",
+    "CC0066",
+    "CC00CC",
+    "CC99FF",
+    "E5CCFF",
+    "FF007F",
+    "FF00FF",
+    "FF3399",
+    "FF33FF",
+    "FF66B2",
+    "FF66FF",
+    "FF99CC",
+    "FF99FF",
+    "FFCCE5",
+    "FFCCFF"
+  ],
+  "og_fairy": [
+    "FF99FF",
+    "FFCCFF",
+    "E5CCFF",
+    "CC99FF",
+    "CC00CC",
+    "FF00FF",
+    "FF33FF",
+    "FF66FF",
+    "B266FF",
+    "9933FF",
+    "7F00FF",
+    "660066",
+    "6600CC",
+    "4C0099",
+    "330066",
+    "990099"
+  ],
+  "og_fairy_boots": [
+    "660033",
+    "99004C",
+    "CC0066"
+  ],
+  "og_fairy_leggings": [
+    "660033",
+    "99004C",
+    "FFCCE5"
+  ],
+  "og_fairy_chestplate": [
+    "660033",
+    "FFCCE5",
+    "FF99CC"
+  ],
+  "og_fairy_helmet": [
+    "FFCCE5",
+    "FF99CC",
+    "FF66B2"
+  ],
+  "crystal": [
+    "1F0030",
+    "46085E",
+    "54146E",
+    "5D1C78",
+    "63237D",
+    "6A2C82",
+    "7E4196",
+    "8E51A6",
+    "9C64B3",
+    "A875BD",
+    "B88BC9",
+    "C6A3D4",
+    "D9C1E3",
+    "E5D1ED",
+    "EFE1F5",
+    "FCF3FF"
+  ],
+  "bleached": "A06540",
+  "great_spook": [
+    "000000",
+    "070008",
+    "0E000F",
+    "150017",
+    "1B001F",
+    "220027",
+    "29002E",
+    "300036",
+    "37003E",
+    "3E0046",
+    "45004D",
+    "4C0055",
+    "52005D",
+    "590065",
+    "60006C",
+    "670074",
+    "6E007C",
+    "750084",
+    "7C008B",
+    "830093",
+    "89009B",
+    "9000A3",
+    "9700AA",
+    "993399",
+    "9E00B2"
+  ],
+  "glitched": {
+    "POWER_WITHER_BOOTS": "E76E3C",
+    "TANK_WITHER_BOOTS": "88837E",
+    "SPEED_WITHER_BOOTS": "8969C8",
+    "WISE_WITHER_BOOTS": "1CD4E4",
+    "WITHER_BOOTS": "000000",
+    "POWER_WITHER_LEGGINGS": "E75C3C",
+    "TANK_WITHER_LEGGINGS": "65605AZ",
+    "SPEED_WITHER_LEGGINGS": "5D2FB9",
+    "WISE_WITHER_LEGGINGS": "17A8C4",
+    "WITHER_LEGGINGS": "000000",
+    "WITHER_CHESTPLATE": "000000",
+    "WISE_WITHER_CHESTPLATE": "1793C4",
+    "SPEED_WITHER_CHESTPLATE": "4A14B7",
+    "TANK_WITHER_CHESTPLATE": "45413C",
+    "POWER_WITHER_CHESTPLATE": "E7413C",
+    "SHARK_SCALE_CHESTPLATE": "FFDC51",
+    "SHARK_SCALE_LEGGINGS": "FFDC51",
+    "SHARK_SCALE_BOOTS": "FFDC51",
+    "FROZEN_BLAZE_CHESTPLATE": "F7DA33",
+    "FROZEN_BLAZE_LEGGINGS": "F7DA33",
+    "FROZEN_BLAZE_BOOTS": "F7DA33",
+    "BAT_PERSON_CHESTPLATE": "606060",
+    "BAT_PERSON_LEGGINGS": "606060",
+    "BAT_PERSON_BOOTS": "606060"
+  },
+  "variants": {
+    "RANCHERS_BOOTS": [
+      "CC5500",
+      "000000"
+    ],
+    "REAPER_CHESTPLATE": [
+      "1B1B1B",
+      "FF0000"
+    ],
+    "REAPER_LEGGINGS": [
+      "1B1B1B",
+      "FF0000"
+    ],
+    "REAPER_BOOOTS": [
+      "1B1B1B",
+      "FF0000"
+    ],
+    "ADAPTIVE_CHESTPLATE": [
+      "3ABE78",
+      "82E3D8",
+      "BFBCB2",
+      "D579FF",
+      "FF4242",
+      "FFC234"
+    ],
+    "ADAPTIVE_LEGGINGS": [
+      "169F57",
+      "2AB5A5",
+      "6E00A0",
+      "BB0000",
+      "BFBCB2",
+      "FFF7E6"
+    ],
+    "ADAPTIVE_BOOTS": [
+      "169F57",
+      "2AB5A5",
+      "6E00A0",
+      "BB0000",
+      "BFBCB2",
+      "FFF7E6"
+    ]
+  }
+}
