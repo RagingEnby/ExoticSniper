@@ -29,7 +29,9 @@ async def scanner(webhook):
   lastlastUpdated = auction_data['lastUpdated']
   for auction in auction_data['auctions']:
     if auction['claimed']: return
-    if auction['start'] < lastlastUpdated: continue
+    if auction['start'] < lastlastUpdated:
+      print(f'Skiping auction by {auction["auctioneer"]} ({auction["uuid"]}) due to being old')
+      continue
     
     item_data = get_nbt_data(auction['item_bytes'])
     if item_data == {}: continue
