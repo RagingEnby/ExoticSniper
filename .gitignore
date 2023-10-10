@@ -1,3 +1,5 @@
 .cache/
 *.pyc
 .pythonlibs/
+.replit
+replit.nix
