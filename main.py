@@ -49,9 +49,11 @@ async def scanner(webhook):
       await send_webhook(webhook, content, embed)
   lastlastUpdated = auction_data['lastUpdated']
 
-  print('Finished scan!\n')
+  print('Finished scan!')
 
-  time.sleep(until_refresh(auction_data['lastUpdated']))
+  sleep_time = until_refresh(auction_data['lastUpdated'])
+  print(f'Sleeping for {sleep_time}\n')
+  time.sleep(sleep_time)
 
 async def main():
   async with aiohttp.ClientSession() as session:
