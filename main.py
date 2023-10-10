@@ -24,7 +24,7 @@ lastlastUpdated = get_auction_data()['lastUpdated']
 
 #while True:
 async def scanner(webhook):
-  #async with aiohttp.ClientSession() as session:
+  print('Starting scan...')
   auction_data = get_auction_data()
   lastlastUpdated = auction_data['lastUpdated']
   for auction in auction_data['auctions']:
@@ -37,7 +37,8 @@ async def scanner(webhook):
     if not isLeatherArmor(item_id): continue
     exotic_type, hex = getExoticType(item_data)
     if exotic_type is None: continue
-      
+
+    print('\n\n')
     print(hex)
     print(auction['uuid'])
     print(str(item_data).replace("'", '"'))
@@ -47,13 +48,15 @@ async def scanner(webhook):
       content, embed = make_webhook(item_data, auction, exotic_type, hex, item_types[item_id])
       await send_webhook(webhook, content, embed)
   lastlastUpdated = auction_data['lastUpdated']
-    
-    
+
+  print('Finished scan!\n')
+
   time.sleep(until_refresh(auction_data['lastUpdated']))
 
 async def main():
   async with aiohttp.ClientSession() as session:
     webhook = disnake.Webhook.from_url(config.WEBHOOK_URL, session=session)
-    await scanner(webhook)
+    while True:
+      await scanner(webhook)
 
 asyncio.run(main())
