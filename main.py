@@ -24,9 +24,9 @@ lastlastUpdated = get_auction_data()['lastUpdated']
 
 #while True:
 async def scanner(webhook):
+  global lastlastUpdated
   print('Starting scan...')
   auction_data = get_auction_data()
-  lastlastUpdated = auction_data['lastUpdated']
   for auction in auction_data['auctions']:
     if auction['claimed']: return
     if auction['start'] < lastlastUpdated:
