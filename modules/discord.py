@@ -5,7 +5,7 @@ import config
 from modules.mojang import get_name
 from modules.formatters import pretty_exotic_type, numerize, string_to_hex
 from modules.armor_image.armor_image import render_armor
-def make_webhook(item_data, auction, exotic_type, hex, item_type):
+def make_webhook(item_data, auction, exotic_type, hex, item_type, item_id):
   embed = disnake.Embed(
     title=auction['item_name'],
     url=f"https://sky.coflnet.com/auction/{auction['uuid']}",

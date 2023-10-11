@@ -51,7 +51,7 @@ async def scanner(webhook):
     print(exotic_type)
     print('\n\n')
     if should_send_webhook(item_id, exotic_type):
-      content, embed = make_webhook(item_data, auction, exotic_type, hex, item_types[item_id])
+      content, embed = make_webhook(item_data, auction, exotic_type, hex, item_types[item_id], item_id)
       await send_webhook(webhook, content, embed)
   lastlastUpdated = auction_data['lastUpdated']
 
