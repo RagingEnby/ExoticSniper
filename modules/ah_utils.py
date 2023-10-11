@@ -38,6 +38,7 @@ def until_refresh(lastUpdated):
   
   nextUpdate = lastUpdated_sec + 70
   untilNextUpdate = nextUpdate - current_time
+  if untilNextUpdate <= 0: return 5
   return untilNextUpdate
 
 
