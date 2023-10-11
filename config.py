@@ -3,6 +3,8 @@ WEBHOOK_URL = 'https://discord.com/api/webhooks/1161021343895134219/muMqZjxHYrrg
 bot_name = 'Skypixel'
 bot_avatar = 'https://github.com/RagingEnby/SkypixelRepo/blob/main/skypixel.png?raw=true'
 
+flip_ping = '<@&1161735944693633034>'
+
 test_mode = True
 ah_mode = True
 
@@ -15,7 +17,8 @@ never_exotic = [
   'VELVET_TOP_HAT',
   'CASHMERE_JACKET',
   'SATIN_TROUSERS',
-  'OXFORD_SHOES'
+  'OXFORD_SHOES',
+  'GHOST_BOOTS'
 ]
 
 fairy_armor = ['FAIRY_HELMET', 'FAIRY_CHESTPLATE', 'FAIRY_LEGGINGS', 'FAIRY_BOOTS']

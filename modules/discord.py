@@ -87,4 +87,6 @@ def make_content(item_id, exotic_type, auction):
   # If the price is cheaper than or equal to 100,000,000 and is og fairy
   elif price <= 100000000 and exotic_type == 'og_fairy':
     ping = True
+
+  if ping: return config.flip_ping
   return ''
