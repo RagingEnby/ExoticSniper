@@ -41,7 +41,9 @@ def make_webhook(item_data, auction, exotic_type, hex, item_type):
   embed.set_thumbnail(
     file=disnake.File('modules/armor_image/a/output.png')
   )
-  return '', embed
+
+  content = make_content(item_id, exotic_type, auction)
+  return content, embed
 
 
 
@@ -51,3 +53,38 @@ async def send_webhook(webhook, content, embed):
                username=config.bot_name,
                avatar_url=config.bot_avatar
               )
+
+def make_content(item_id, exotic_type, auction):
+  price = auction['starting_bid']
+  # If the armor piece is not lapis or magma armor, price is cheaper than or equal to 100,000,000, and is exotic
+  if item_id not in LAPIS_AND_MAGMA_ARMOR and price <= 100000000 and exotic_type == 'exotic':
+    ping = True
+
+  # If the armor piece is lapis or magma armor, the price is cheaper than or equal to 20,000,000, and is exotic
+  elif item_id in LAPIS_AND_MAGMA_ARMOR and price <= 20000000 and exotic_type == 'exotic':
+    ping = True
+
+  # If the armor piece is wither armor, the price is cheaper than or equal to 50,000,000, and is any non-bleached exotic type
+  elif item_id in WITHER_ARMOR and price <= 50000000 and exotic_type != 'bleached':
+    ping = True
+
+  # If the armor piece is wither armor, the price is cheaper than or equal to 25,000,000, and it is bleached
+  elif item_id in WITHER_ARMOR and price <= 25000000 and exotic_type == 'bleached':
+    ping = True
+
+  # If the armor piece is blaze armor, fairy/crystal, and cheaper than or equal to 100,000,000:
+  elif item_id in BLAZE_ARMOR and price <= 100000000 and exotic_type in ['crystal', 'fairy']
+    ping = True
+
+  # If the price is cheaper than or equal to 5,000,000 and is crystal or fairy
+  elif price <= 5000000 and exotic_type in ['crystal', 'fairy']:
+    ping = True
+
+  # If the price is cheaper than or equal to 1,000,000 and is bleached
+  elif price <= 1000000 and exotic_type == 'bleached':
+    ping = True
+
+  # If the price is cheaper than or equal to 100,000,000 and is og fairy
+  elif price <= 100000000 and exotic_type == 'og_fairy':
+    ping = True
+  return ''
