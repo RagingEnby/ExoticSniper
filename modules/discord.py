@@ -56,6 +56,7 @@ async def send_webhook(webhook, content, embed):
 
 def make_content(item_id, exotic_type, auction):
   if not auction['bin']: return ''
+  ping = False
   price = auction['starting_bid']
   # If the armor piece is not lapis or magma armor, price is cheaper than or equal to 100,000,000, and is exotic
   if item_id not in config.lapis_and_magma_armor and price <= 100000000 and exotic_type == 'exotic':
