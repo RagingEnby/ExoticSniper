@@ -5,13 +5,9 @@ from modules.color import rgb_to_hex
 import config
 
 def get_item_data():
-  if not config.test_mode:
-    response = requests.get('https://api.hypixel.net/resources/skyblock/items').json()
-    with open('cache/items.json', 'w') as file:
-      json.dump(response, file, indent=2)
-  else:
-    with open('cache/items.json', 'r') as file:
-      response = json.load(file)
+  response = requests.get('https://api.hypixel.net/resources/skyblock/items').json()
+  with open('cache/items.json', 'w') as file:
+    json.dump(response, file, indent=2)
   return response
 
 

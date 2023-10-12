@@ -23,7 +23,6 @@ def getExoticType(item_data):
 
   if default_colors[item_id] == hex: return None, hex
   if item_id in config.great_spook_armor:
-    print('great spook found')
     if hex in colors['great_spook']:
       return None, hex
     else:
@@ -75,7 +74,13 @@ def isVariant(item_id, hex):
 
   if item_id == config.ghostly_boots: return True
 
-  if item_id in colors['variants'] and hex in colors['variants'][item_id]: return True
+  if item_id in colors['variants']:
+    print(f'{item_id} in colors[variants]')
+    if hex in colors['variants'][item_id]:
+      print(f'{hex} in colors[variants][{item_id}]')
+      return True
+    else:
+      print(f'{hex} not in colors[variants][{item_id}]: {colors["variants"][item_id]}')
 
 def isGlitched(item_id, hex):
   return item_id in colors['glitched'] and colors['glitched'][item_id] == hex
