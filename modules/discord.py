@@ -48,11 +48,12 @@ def make_webhook(item_data, auction, exotic_type, hex, item_type, item_id):
 
 
 async def send_webhook(webhook, content, embed):
-  await webhook.send(content=content,
+  response = await webhook.send(content=content,
                embed=embed,
                username=config.bot_name,
                avatar_url=config.bot_avatar
               )
+  return response
 
 def make_content(item_id, exotic_type, auction):
   if not auction['bin']: return ''

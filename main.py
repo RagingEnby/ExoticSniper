@@ -27,6 +27,9 @@ async def scanner(webhook):
   global lastlastUpdated
   print('Starting scan...')
   auction_data = get_auction_data()
+  if auction_data['lastUpdated'] == lastlastUpdated:
+    print('unupdated acution house\n')
+    return
   for auction in auction_data['auctions']:
     if auction['claimed']: return
     if auction['start'] < lastlastUpdated: continue
@@ -46,7 +49,8 @@ async def scanner(webhook):
     print('\n\n')
     if should_send_webhook(item_id, exotic_type):
       content, embed = make_webhook(item_data, auction, exotic_type, hex, item_types[item_id], item_id)
-      await send_webhook(webhook, content, embed)
+      response = await send_webhook(webhook, content, embed)
+      print(response)
   lastlastUpdated = auction_data['lastUpdated']
 
   print('Finished scan!')

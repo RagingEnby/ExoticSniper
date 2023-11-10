@@ -36,9 +36,9 @@ def until_refresh(lastUpdated):
   lastUpdated_sec = round(lastUpdated / 1000)
   current_time = round(time.time())
   
-  nextUpdate = lastUpdated_sec + 70
+  nextUpdate = lastUpdated_sec + 60
   untilNextUpdate = nextUpdate - current_time
-  if untilNextUpdate <= 0: return 5
+  if untilNextUpdate <= 0: return 0
   return untilNextUpdate
 
 
