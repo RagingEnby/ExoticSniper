@@ -5,14 +5,6 @@ import requests
 #  return mojang_response['name']
   
 def get_name(uuid):
-<<<<<<< Updated upstream
-  try:
-    raging_response = requests.get(f'https://api.ragingenby.dev/ign/{uuid}').json()
-    return raging_response['name']
-  except Exception:
-    mojang_response = requests.get(f'https://sessionserver.mojang.com/session/minecraft/profile/{uuid}').json()
-    return mojang_response['name']
-=======
     try:
         raging_response = requests.get(
             f"https://api.ragingenby.dev/ign/{uuid}"
@@ -25,5 +17,4 @@ def get_name(uuid):
         if mojang_response.status_code == 200:
             return mojang_response.json()['name']
         else:
-            return auction['auctioneer']
->>>>>>> Stashed changes
+            return uuid

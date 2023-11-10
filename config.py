@@ -1,4 +1,4 @@
-WEBHOOK_URL = 'https://discord.com/api/webhooks/1161021343895134219/muMqZjxHYrrgqYKJOgIw7NaYzehpt_T6LjW_4O3oL2lhsY11A7s1eZRC1cS1lb28_Xqr'
+WEBHOOK_URL = 'https://discord.com/api/webhooks/1166117649986621460/sRzaUaK8fFIVzLNuslyV-0fZdEHvsM9gbcSIy4SoskP6Qldp_-vnLDGoFYjzGhqO5vyv'
 
 bot_name = 'Skypixel'
 bot_avatar = 'https://github.com/RagingEnby/SkypixelRepo/blob/main/skypixel.png?raw=true'
