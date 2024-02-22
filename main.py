@@ -27,6 +27,7 @@ async def scanner(webhook):
   global lastlastUpdated
   print('Starting scan...')
   auction_data = get_auction_data()
+  if not auction_data: return
   if auction_data['lastUpdated'] == lastlastUpdated:
     print('unupdated acution house\n')
     return
@@ -60,9 +61,14 @@ async def scanner(webhook):
   time.sleep(sleep_time)
 
 async def main():
-  async with aiohttp.ClientSession() as session:
-    webhook = disnake.Webhook.from_url(config.WEBHOOK_URL, session=session)
-    while True:
-      await scanner(webhook)
+  try:
+    async with aiohttp.ClientSession() as session:
+      webhook = disnake.Webhook.from_url(config.WEBHOOK_URL, session=session)
+      while True:
+        await scanner(webhook)
+  except Exception as e:
+    print("ERROR:", e)
+    await main()
 
-asyncio.run(main())
+while True:
+  asyncio.run(main())

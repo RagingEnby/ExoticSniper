@@ -17,19 +17,17 @@ def get_nbt_data(item_bytes):
     nbt_data = nbt_data['i'][0]['tag']
     return nbt_data
   except Exception as e:
-    print(e)
-    print(item_bytes)
     return {}
 
 
 def get_auction_data(page=0):
   page = str(page)
-  response = requests.get(f'https://api.hypixel.net/skyblock/auctions?page={page}').json()
-  #with open('cache/auctions.json', 'w') as file:
-  #  json.dump(response, file, indent=2)
-  #with open('cache/auctions.json', 'r') as file:
-  #  response = json.load(file)
-  return response
+  try:
+    response = requests.get(f'https://api.hypixel.net/v2/skyblock/auctions?page={page}', timeout=15).json()
+    return response
+  except requests.Timeout:
+    print("Request timed out (15 seconds). Returning None.")
+    return None
 
 
 def until_refresh(lastUpdated):
