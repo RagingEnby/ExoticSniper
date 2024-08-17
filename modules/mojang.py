@@ -14,7 +14,7 @@ def get_name(uuid):
         return cache[uuid]
     try:
         raging_response = requests.get(
-            f"https://api.ragingenby.dev/ign/{uuid}",
+            f"https://api.ragingenby.dev/name/{uuid}",
             headers=RAGINGENBY_HEADERS
         )
         name = raging_response.json()['name']
